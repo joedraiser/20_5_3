@@ -39,9 +39,11 @@ int main()
 
     std::cout << "Here is what you caught by now:\n";
 
-    while(!basket.eof())
+    while(true)
     {
         basket >> fishType;
+        if(basket.eof())
+            break;
         std::cout << fishType << std::endl;
     }
 
